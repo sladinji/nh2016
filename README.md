@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 # Lancement du site
 
-> sandman2ctl -d sqlite+pysqlite:///db.sqlite
+> python run.py
 
 # Utilisation de l'api
 
