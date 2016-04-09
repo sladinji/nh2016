@@ -4,6 +4,7 @@ services automatically from existing databases."""
 
 import argparse
 from sandman2 import get_app
+from flask.ext.cors import CORS
 
 
 def main():
@@ -52,6 +53,8 @@ def main():
         host = '127.0.0.1'
     else:
         host = '0.0.0.0'
+    CORS(app)
+
     app.run(host=host, port=int(args.port))
 
 
