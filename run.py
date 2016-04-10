@@ -55,6 +55,12 @@ def main():
         host = '0.0.0.0'
     CORS(app)
 
+    from flask import request
+
+    @app.before_request
+    def log_request():
+        print(request.data)
+
     app.run(host=host, port=int(args.port))
 
 
